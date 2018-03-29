@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
-import Aux from '../Aux/AuxComponent';
-import classes from './Layout.scss';
+import React, { Component } from 'react';
+
+import Aux from '../AuxComponent/AuxComponent';
+import classes from './Layout.css';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
-
 
 class Layout extends Component {
     state = {
@@ -20,12 +20,13 @@ class Layout extends Component {
         } );
     }
 
-    render() {
+    render () {
         return (
             <Aux>
-                <Toolbar sideDrawOpen={this.sideDrawerToggleHandler}/>
-                <SideDrawer open={this.state.showSideDrawer} closed={this.sideDrawerClosedHandler}/>
-                SideDrawer, Backdrop
+                <Toolbar drawerToggleClicked={this.sideDrawerToggleHandler} />
+                <SideDrawer
+                    open={this.state.showSideDrawer}
+                    closed={this.sideDrawerClosedHandler} />
                 <main className={classes.Content}>
                     {this.props.children}
                 </main>
