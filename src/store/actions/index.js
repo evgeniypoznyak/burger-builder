@@ -9,6 +9,9 @@ export {
     purchaseBurger,
     purchaseInit,
     fetchOrders,
+    fetchOrdersFail,
+    fetchOrdersStart,
+    fetchOrdersSuccess,
 } from './order';
 export {
     auth,
